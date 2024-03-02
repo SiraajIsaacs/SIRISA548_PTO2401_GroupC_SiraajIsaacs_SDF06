@@ -3,16 +3,16 @@
     margin: 0 auto;
     padding: 0 20px;
 }
-
+/* bottom space for the space between the header and the body of the page */
 header {
     margin-bottom: 25px;
 }
-
+/* add a flexbox to the profile section so that the bio, stats, button and image did not stack on top of each other that does not look like instagram */
 .profile {
     display: flex;
     align-items: center;
 }
-
+/* radius for the circle, border for the story like replica */
 .profile-image img {
     width: 150px;
     height: 150px;
@@ -21,11 +21,11 @@ header {
     border-color: lightpink;
     margin-right: 20px;
 }
-
+/* added a margin so that the settings aren't touching other elements */
 .profile-user-settings {
     margin-right: 20px;
 }
-
+/* styled buttons a bit */
 .btn {
     margin-top: 10px;
 }
@@ -54,18 +54,18 @@ header {
 .profile-stats {
     margin-top: 10px;
 }
-
+/* got rid of the bullet points so that it can look like a standard instagram statistics count also a flexbox so that it can be in a row */
 .profile-stats ul {
     list-style-type: none;
     display: flex;
     flex-wrap: wrap;
 }
-
+/* This is when I realized specifity is a thing, could not style the font in the UL so did it in the LI */
 .profile-stats li {
     margin-right: 20px;
     font-size: 14px;
 }
-
+/* flexbox for the bio so that it can wrap and styling */
 .profile-bio {
     margin-top: 10px;
     margin-right: 10px;
@@ -73,7 +73,7 @@ header {
     display: flex;
     flex-wrap: wrap;
 }
-
+/* went with auto fit instead of auto fill as I did not like the way auto fill looks when making the page smaller */
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 2fr));
@@ -90,7 +90,7 @@ header {
     height: 50%;
     cursor: pointer;
 }
-
+/* transition hover effect for the like and comment count to show on the picture, well under in this case */
 .gallery-item-info {
     position: relative;
     background-color: gray;
@@ -113,7 +113,7 @@ header {
 .gallery-item-info li {
     margin-right: 10px;
 }
-
+/* Added a container div to the loader as it was not centering without the flexbox */
 .loader-container {
     display: flex;
     justify-content: center;
@@ -129,7 +129,7 @@ header {
     height: 30px;
     animation: spin 2s linear infinite;
 }
-
+/* keyframes for the spinner as I was not sure how else to create the loader */
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
